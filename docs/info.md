@@ -104,6 +104,7 @@ For integration test:
 
 ## Known Bugs
 
-[1] Denormalized numbers do not always add correctly.
-[2] When testing on an fpga it was observed that it sometimes worked flawlessly and othertimes the output was always 0.
-	to what extent that was a fault of the testsetup or the tester  or the actual code has yet to be determined.
+- [1] Denormalized numbers do not always add correctly.
+
+- [2] When testing on an fpga it was observed that it sometimes worked flawlessly and othertimes the output was always 0.
+	  to what extent that was a fault of the testsetup or the tester  or the actual code has yet to be determined.
