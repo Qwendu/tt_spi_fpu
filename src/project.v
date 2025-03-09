@@ -26,8 +26,8 @@ module tt_um_Qwendu_spi_fpu (
 		.reset(!rst_n),
 		.SPI_clock(ui_in[0]),
 		.SPI_not_chip_select(ui_in[1]),
-		.SPI_in(uio_in[2]),
-		.SPI_out(uio_out[0])
+		.SPI_in(ui_in[2]),
+		.SPI_out(uo_out[0])
 	);
 
 	// List all unused inputs to prevent warnings

@@ -130,7 +130,7 @@ module spi_rx (
 		if(SPI_clock_falling)
 			SPI_out_r <= out_data_r[7 - out_bit_counter];
 	
-	assign SPI_out = SPI_out_r;//out_data_r[7 - out_bit_counter];
+	assign SPI_out = SPI_out_r;
 
 	assign unused = {3'b0, SPI_clock_sampled, SPI_not_chip_select_sampled, SPI_not_chip_select_falling, SPI_in_rising, SPI_in_falling};
 endmodule
