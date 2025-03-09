@@ -15,10 +15,17 @@ project:
   # Source files must be in ./src and you must list each source file separately, one per line.
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
+    - "first_bit_position.v"
+    - "float_adder_v2.v"
+    - "left_shifter.v"
     - "project.v"
+    - "right_shifter.v"
+    - "sampler.v"
+    - "serial_in_parallel_out.v"
     - "spi_fpu.v"
     - "spi_rx.v"
-    - "spi_rx.v"
+
+
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
