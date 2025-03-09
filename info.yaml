@@ -9,7 +9,7 @@ project:
 
   tiles: "2x2"
 
-  top_module:  "tt_um_Qwenudu_spi_fpu"
+  top_module:  "tt_um_Qwendu_spi_fpu"
 
   # List your project's source files here.
   # Source files must be in ./src and you must list each source file separately, one per line.
