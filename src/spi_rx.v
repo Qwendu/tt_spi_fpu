@@ -1,5 +1,4 @@
 `default_nettype none
-`timescale 10ns/1ns
 
 // CPOL=1
 // CPHA=1

@@ -1,5 +1,4 @@
 `default_nettype none
-`timescale 10ns/1ns
 
 
 // In reference to http://users.encs.concordia.ca/~asim/COEN_6501/Lecture_Notes/L4_Slides.pdf
@@ -65,8 +64,8 @@ module float_adder_v2 #(
 	begin
 		s1_a_nan_comb = ((`EXP(in_a) == (1 << EXPONENT_WIDTH) - 1) &&  |`MAN(in_a));
 		s1_b_nan_comb = ((`EXP(in_b) == (1 << EXPONENT_WIDTH) - 1) &&  |`MAN(in_b));
-		s1_a_inf_comb = ((`EXP(in_a) == (1 << EXPONENT_WIDTH) - 1) && !|`MAN(in_a));
-		s1_b_inf_comb = ((`EXP(in_b) == (1 << EXPONENT_WIDTH) - 1) && !|`MAN(in_b));
+		s1_a_inf_comb = ((`EXP(in_a) == (1 << EXPONENT_WIDTH) - 1) && ~|`MAN(in_a));
+		s1_b_inf_comb = ((`EXP(in_b) == (1 << EXPONENT_WIDTH) - 1) && ~|`MAN(in_b));
 	end
 
 	always @(posedge clock) if(reset) s1_valid <= 0; else

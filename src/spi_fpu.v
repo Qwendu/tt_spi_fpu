@@ -1,5 +1,4 @@
 `default_nettype none
-`timescale 1ns/1ns
 
 // icetime says max of 3 MHz, which is fine
 
@@ -41,9 +40,9 @@ module spi_fpu(
 	wire [31:0] float_result;
 	reg  [31:0] float_registers[4] /*verilator public */;
 
-	localparam COMMAND_WRITE_TO_REG  = 2'h00;
-	localparam COMMAND_PERFORM_ADD   = 2'h01;
-	localparam COMMAND_READ_FROM_REG = 2'h02;
+	localparam COMMAND_WRITE_TO_REG  = 2'h0;
+	localparam COMMAND_PERFORM_ADD   = 2'h1;
+	localparam COMMAND_READ_FROM_REG = 2'h2;
 
 
 

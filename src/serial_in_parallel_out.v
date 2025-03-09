@@ -1,5 +1,4 @@
 `default_nettype none
-`timescale 10ns/1ns
 
 module serial_in_parallel_out #(
 	parameter DATA_WIDTH=8
