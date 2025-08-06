@@ -60,7 +60,7 @@ add is being performed.
 
 ```
     +----+----+----+----+----+
-IN: |0x00|in_a|in_b|in_c|0x00|
+IN: |0x01|in_a|in_b|in_c|0x00|
     +----+----+----+----+----+
 OUT:| und| und| und| und| und|
     +----+----+----+----+----+
@@ -73,7 +73,7 @@ Reads a float from the internal register and serialises it on CIPO.
 
 ```
     +----+----+----+----+----+----+
-IN: |0x00|0x0r|xxxx|xxxx|xxxx|xxxx|
+IN: |0x02|0x0r|xxxx|xxxx|xxxx|xxxx|
     +----+----+----+----+----+----+
 OUT:| und| und|b[0]|b[1]|b[2]|b[3]|
     +----+----+----+----+----+----+
@@ -108,3 +108,7 @@ For integration test:
 
 - [2] When testing on an fpga it was observed that it sometimes worked flawlessly and othertimes the output was always 0.
 	  to what extent that was a fault of the testsetup or the tester  or the actual code has yet to be determined.
+
+- [3] When testing on an fpga it was observed that an addition performed with the commands write, write, compute, read works
+      well the first time after a reset, but not a second time.
+      (I am a newbie in hardware design after all and my test cases did not cover repeated commands ... *facepalm*)
